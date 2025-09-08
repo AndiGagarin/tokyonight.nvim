@@ -43,7 +43,11 @@ function M.setup(opts)
 
   -- Popups and statusline always get a dark background
   colors.bg_popup = colors.bg_dark
-  colors.bg_statusline = colors.bg_dark
+
+  -- Statusline is configurable
+  colors.bg_statusline = opts.styles.statusline == "transparent" and colors.none
+    or opts.styles.statusline == "dark" and colors.bg_dark
+    or colors.bg
 
   -- Sidebar and Floats are configurable
   colors.bg_sidebar = opts.styles.sidebars == "transparent" and colors.none
@@ -83,7 +87,7 @@ function M.setup(opts)
     black_bright   = colors.terminal_black,
     red            = colors.red,
     red_bright     = Util.brighten(colors.red),
-    green          = colors.green,
+    green          = colors.teal,
     green_bright   = Util.brighten(colors.green),
     yellow         = colors.yellow,
     yellow_bright  = Util.brighten(colors.yellow),
