@@ -87,7 +87,7 @@ function M.setup(opts)
     black_bright   = colors.terminal_black,
     red            = colors.red,
     red_bright     = Util.brighten(colors.red),
-    green          = colors.teal,
+    green          = colors.green,
     green_bright   = Util.brighten(colors.green),
     yellow         = colors.yellow,
     yellow_bright  = Util.brighten(colors.yellow),
